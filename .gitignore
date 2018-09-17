@@ -1,0 +1,10 @@
+.project
+.classpath
+.pydevproject
+.pyc
+red.xml
+libspecs
+
+# macOS specific git ignore
+.DS_Store
+

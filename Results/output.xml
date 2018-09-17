@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180917 23:40:28.139" generator="Robot 3.0.4 (Python 2.7.14 on darwin)">
+<suite id="s1" name="Google Basic Search &amp; Google Search Limits">
+<suite source="/Users/falada/Testing/Google/Google_Test/Tests/Google_Basic_Search.robot" id="s1-s1" name="Google Basic Search">
+<test id="s1-s1-t1" name="Searching Using Button and Enter">
+<kw type="setup" name="Open Google" library="Google_Keywords">
+<arguments>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.google.com/</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:28.294" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" endtime="20180917 23:40:34.918" starttime="20180917 23:40:28.293"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180917 23:40:35.040" starttime="20180917 23:40:34.918"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:40:35.543" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:40:35.543" starttime="20180917 23:40:35.040"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:40:35.544" starttime="20180917 23:40:28.293"></status>
+</kw>
+<kw name="Search For Avast" library="Google_Keywords">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:35.545" level="INFO">Typing text 'Avast' into text field 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20180917 23:40:35.644" starttime="20180917 23:40:35.545"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${search_btn_suggest}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:40:35.868" starttime="20180917 23:40:35.645"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${search_btn_suggest}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:35.868" level="INFO">Clicking button 'xpath=//input[@class="lsb"]'.</msg>
+<status status="PASS" endtime="20180917 23:40:37.335" starttime="20180917 23:40:35.868"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:40:37.335" starttime="20180917 23:40:35.544"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${avast_url}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:37.356" level="INFO">Current page contains link 'https://www.avast.com/'.</msg>
+<status status="PASS" endtime="20180917 23:40:37.356" starttime="20180917 23:40:37.335"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:40:37.780" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:40:37.780" starttime="20180917 23:40:37.357"></status>
+</kw>
+<kw name="Search Avast Using Enter">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:37.781" level="INFO">Typing text 'Avast' into text field 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20180917 23:40:37.866" starttime="20180917 23:40:37.781"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:40:39.080" starttime="20180917 23:40:37.866"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:40:39.080" starttime="20180917 23:40:37.781"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${avast_url}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:39.113" level="INFO">Current page contains link 'https://www.avast.com/'.</msg>
+<status status="PASS" endtime="20180917 23:40:39.114" starttime="20180917 23:40:39.081"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:40:39.538" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:40:39.538" starttime="20180917 23:40:39.114"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180917 23:40:39.621" starttime="20180917 23:40:39.539"></status>
+</kw>
+<doc>Testing that search works on
+a button click as well as using Enter key.</doc>
+<status status="PASS" endtime="20180917 23:40:39.621" critical="yes" starttime="20180917 23:40:28.292"></status>
+</test>
+<test id="s1-s1-t2" name="Keyword Search">
+<kw type="setup" name="Open Google" library="Google_Keywords">
+<arguments>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.google.com/</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:39.624" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" endtime="20180917 23:40:46.254" starttime="20180917 23:40:39.623"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180917 23:40:46.455" starttime="20180917 23:40:46.254"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:40:46.943" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:40:46.943" starttime="20180917 23:40:46.456"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:40:46.944" starttime="20180917 23:40:39.623"></status>
+</kw>
+<kw name="Search For Avast" library="Google_Keywords">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:46.945" level="INFO">Typing text 'Avast' into text field 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20180917 23:40:47.045" starttime="20180917 23:40:46.945"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${search_btn_suggest}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:40:47.273" starttime="20180917 23:40:47.046"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${search_btn_suggest}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:47.273" level="INFO">Clicking button 'xpath=//input[@class="lsb"]'.</msg>
+<status status="PASS" endtime="20180917 23:40:48.774" starttime="20180917 23:40:47.273"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:40:48.775" starttime="20180917 23:40:46.944"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${avast_url}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:48.792" level="INFO">Current page contains link 'https://www.avast.com/'.</msg>
+<status status="PASS" endtime="20180917 23:40:48.792" starttime="20180917 23:40:48.775"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${avast_wiki_url}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:48.807" level="INFO">Current page contains link 'https://en.wikipedia.org/wiki/Avast'.</msg>
+<status status="PASS" endtime="20180917 23:40:48.808" starttime="20180917 23:40:48.792"></status>
+</kw>
+<kw name="Avast Company Link Should Be Higher">
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns vertical position of element identified by ``locator``.</doc>
+<arguments>
+<arg>${avast_link}</arg>
+</arguments>
+<assign>
+<var>${home_site}</var>
+</assign>
+<msg timestamp="20180917 23:40:48.825" level="INFO">${home_site} = 565.0</msg>
+<status status="PASS" endtime="20180917 23:40:48.826" starttime="20180917 23:40:48.808"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns vertical position of element identified by ``locator``.</doc>
+<arguments>
+<arg>${wiki_link}</arg>
+</arguments>
+<assign>
+<var>${wiki_site}</var>
+</assign>
+<msg timestamp="20180917 23:40:48.844" level="INFO">${wiki_site} = 900.0</msg>
+<status status="PASS" endtime="20180917 23:40:48.844" starttime="20180917 23:40:48.826"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${wiki_site}&gt;${home_site}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:40:48.845" starttime="20180917 23:40:48.845"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:40:48.845" starttime="20180917 23:40:48.808"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:40:49.306" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:40:49.307" starttime="20180917 23:40:48.845"></status>
+</kw>
+<kw name="Go Back" library="Selenium2Library">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" endtime="20180917 23:40:49.496" starttime="20180917 23:40:49.307"></status>
+</kw>
+<kw name="Search For Avast Software" library="Google_Keywords">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:49.497" level="INFO">Typing text 'Avast Software' into text field 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20180917 23:40:49.599" starttime="20180917 23:40:49.496"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${search_btn_suggest}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:40:49.813" starttime="20180917 23:40:49.600"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${search_btn_suggest}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:49.814" level="INFO">Clicking button 'xpath=//input[@class="lsb"]'.</msg>
+<status status="PASS" endtime="20180917 23:40:51.260" starttime="20180917 23:40:49.813"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:40:51.261" starttime="20180917 23:40:49.496"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${avast_url}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:51.274" level="INFO">Current page contains link 'https://www.avast.com/'.</msg>
+<status status="PASS" endtime="20180917 23:40:51.274" starttime="20180917 23:40:51.261"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:40:51.681" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:40:51.681" starttime="20180917 23:40:51.274"></status>
+</kw>
+<kw name="Go Back" library="Selenium2Library">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" endtime="20180917 23:40:51.852" starttime="20180917 23:40:51.681"></status>
+</kw>
+<kw name="Search For software Avast" library="Google_Keywords">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:51.854" level="INFO">Typing text 'software Avast' into text field 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20180917 23:40:51.962" starttime="20180917 23:40:51.853"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${search_btn_suggest}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:40:52.179" starttime="20180917 23:40:51.963"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${search_btn_suggest}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:52.180" level="INFO">Clicking button 'xpath=//input[@class="lsb"]'.</msg>
+<status status="PASS" endtime="20180917 23:40:53.261" starttime="20180917 23:40:52.179"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:40:53.261" starttime="20180917 23:40:51.853"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${avast_about}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:53.278" level="INFO">Current page contains link 'https://www.avast.com/about'.</msg>
+<status status="PASS" endtime="20180917 23:40:53.278" starttime="20180917 23:40:53.261"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:40:53.680" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:40:53.680" starttime="20180917 23:40:53.278"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180917 23:40:53.761" starttime="20180917 23:40:53.681"></status>
+</kw>
+<doc>Verify that Search returns proper
+values and search results are well sorted.</doc>
+<status status="PASS" endtime="20180917 23:40:53.761" critical="yes" starttime="20180917 23:40:39.622"></status>
+</test>
+<test id="s1-s1-t3" name="Wiki Panel Presence">
+<kw type="setup" name="Open Google" library="Google_Keywords">
+<arguments>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.google.com/</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:53.763" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" endtime="20180917 23:40:55.990" starttime="20180917 23:40:53.763"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180917 23:40:56.609" starttime="20180917 23:40:55.990"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:40:57.139" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:40:57.139" starttime="20180917 23:40:56.609"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:40:57.139" starttime="20180917 23:40:53.763"></status>
+</kw>
+<kw name="Search For Avast" library="Google_Keywords">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20180917 23:40:57.140" level="INFO">Typing text 'Avast' into text field 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20180917 23:40:57.245" starttime="20180917 23:40:57.140"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${search_btn_suggest}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:00.027" starttime="20180917 23:40:57.245"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${search_btn_suggest}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:00.027" level="INFO">Clicking button 'xpath=//input[@class="lsb"]'.</msg>
+<status status="PASS" endtime="20180917 23:41:01.725" starttime="20180917 23:41:00.027"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:01.725" starttime="20180917 23:40:57.140"></status>
+</kw>
+<kw name="Verify Wiki Panel">
+<arguments>
+<arg>${wiki_panel}</arg>
+<arg>${avast_text}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${panel}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:01.739" starttime="20180917 23:41:01.726"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${panel}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:01.916" level="INFO">Element 'id=rhs_block' contains text 'Avast Antivirus'.</msg>
+<status status="PASS" endtime="20180917 23:41:01.916" starttime="20180917 23:41:01.739"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:01.916" starttime="20180917 23:41:01.725"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:41:02.373" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:41:02.373" starttime="20180917 23:41:01.917"></status>
+</kw>
+<kw name="Go Back" library="Selenium2Library">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" endtime="20180917 23:41:02.530" starttime="20180917 23:41:02.373"></status>
+</kw>
+<kw name="Search For Avast Software" library="Google_Keywords">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:02.530" level="INFO">Typing text 'Avast Software' into text field 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20180917 23:41:02.628" starttime="20180917 23:41:02.530"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${search_btn_suggest}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:02.844" starttime="20180917 23:41:02.628"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${search_btn_suggest}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:02.845" level="INFO">Clicking button 'xpath=//input[@class="lsb"]'.</msg>
+<status status="PASS" endtime="20180917 23:41:04.161" starttime="20180917 23:41:02.844"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:04.161" starttime="20180917 23:41:02.530"></status>
+</kw>
+<kw name="Verify Wiki Panel">
+<arguments>
+<arg>${wiki_panel}</arg>
+<arg>${avast_software_text}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${panel}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:04.173" starttime="20180917 23:41:04.163"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${panel}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:04.374" level="INFO">Element 'id=rhs_block' contains text 'Avast Software'.</msg>
+<status status="PASS" endtime="20180917 23:41:04.374" starttime="20180917 23:41:04.173"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:04.375" starttime="20180917 23:41:04.162"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:41:04.788" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:41:04.788" starttime="20180917 23:41:04.375"></status>
+</kw>
+<kw name="Go Back" library="Selenium2Library">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" endtime="20180917 23:41:04.951" starttime="20180917 23:41:04.789"></status>
+</kw>
+<kw name="Search For Software Avast" library="Google_Keywords">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:04.952" level="INFO">Typing text 'Software Avast' into text field 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20180917 23:41:05.077" starttime="20180917 23:41:04.952"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${search_btn_suggest}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:05.298" starttime="20180917 23:41:05.077"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${search_btn_suggest}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:05.299" level="INFO">Clicking button 'xpath=//input[@class="lsb"]'.</msg>
+<status status="PASS" endtime="20180917 23:41:06.709" starttime="20180917 23:41:05.298"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:06.710" starttime="20180917 23:41:04.951"></status>
+</kw>
+<kw name="Verify Wiki Panel">
+<arguments>
+<arg>${wiki_panel}</arg>
+<arg>${avast_software_text}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${panel}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:06.726" starttime="20180917 23:41:06.710"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${panel}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:06.901" level="INFO">Element 'id=rhs_block' contains text 'Avast Software'.</msg>
+<status status="PASS" endtime="20180917 23:41:06.901" starttime="20180917 23:41:06.726"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:06.901" starttime="20180917 23:41:06.710"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:41:07.356" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:41:07.356" starttime="20180917 23:41:06.902"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180917 23:41:07.451" starttime="20180917 23:41:07.357"></status>
+</kw>
+<doc>Verify that search results contains
+side panel with link to wikipedia.</doc>
+<status status="PASS" endtime="20180917 23:41:07.452" critical="yes" starttime="20180917 23:40:53.762"></status>
+</test>
+<test id="s1-s1-t4" name="Suggestions">
+<kw type="setup" name="Open Google" library="Google_Keywords">
+<arguments>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.google.com/</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:07.454" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" endtime="20180917 23:41:14.080" starttime="20180917 23:41:07.454"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180917 23:41:14.288" starttime="20180917 23:41:14.081"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:41:14.782" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:41:14.782" starttime="20180917 23:41:14.288"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:14.782" starttime="20180917 23:41:07.453"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>Av</arg>
+</arguments>
+<msg timestamp="20180917 23:41:14.783" level="INFO">Typing text 'Av' into text field 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20180917 23:41:14.874" starttime="20180917 23:41:14.783"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${sugestion_element}0</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:15.095" starttime="20180917 23:41:14.875"></status>
+</kw>
+<kw name="Check Suggestion">
+<arguments>
+<arg>${sugestion_element}0</arg>
+<arg>ast</arg>
+</arguments>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:15.116" starttime="20180917 23:41:15.096"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:15.116" starttime="20180917 23:41:15.095"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:41:15.510" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:41:15.510" starttime="20180917 23:41:15.116"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>Ava</arg>
+</arguments>
+<msg timestamp="20180917 23:41:15.511" level="INFO">Typing text 'Ava' into text field 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20180917 23:41:15.562" starttime="20180917 23:41:15.510"></status>
+</kw>
+<kw name="Check Suggestion">
+<arguments>
+<arg>${sugestion_element}0</arg>
+<arg>st</arg>
+</arguments>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:15.577" starttime="20180917 23:41:15.563"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:15.577" starttime="20180917 23:41:15.563"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:41:15.946" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:41:15.946" starttime="20180917 23:41:15.578"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>Avast</arg>
+</arguments>
+<msg timestamp="20180917 23:41:15.947" level="INFO">Typing text 'Avast' into text field 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20180917 23:41:16.002" starttime="20180917 23:41:15.946"></status>
+</kw>
+<kw name="Search Suggestions">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${index}</var>
+</assign>
+<msg timestamp="20180917 23:41:16.003" level="INFO">${index} = 0</msg>
+<status status="PASS" endtime="20180917 23:41:16.003" starttime="20180917 23:41:16.002"></status>
+</kw>
+<kw type="for" name="${suggestion} IN [ @{suggest_objects} ]">
+<kw type="foritem" name="${suggestion} = avast">
+<kw name="Check Suggestion">
+<arguments>
+<arg>${sugestion_element}${index}</arg>
+<arg>${suggestion}</arg>
+</arguments>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:16.018" starttime="20180917 23:41:16.003"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:16.018" starttime="20180917 23:41:16.003"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${index}+1</arg>
+</arguments>
+<assign>
+<var>${index}</var>
+</assign>
+<msg timestamp="20180917 23:41:16.018" level="INFO">${index} = 1</msg>
+<status status="PASS" endtime="20180917 23:41:16.019" starttime="20180917 23:41:16.018"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:16.019" starttime="20180917 23:41:16.003"></status>
+</kw>
+<kw type="foritem" name="${suggestion} = free">
+<kw name="Check Suggestion">
+<arguments>
+<arg>${sugestion_element}${index}</arg>
+<arg>${suggestion}</arg>
+</arguments>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:16.265" starttime="20180917 23:41:16.019"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:16.265" starttime="20180917 23:41:16.019"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${index}+1</arg>
+</arguments>
+<assign>
+<var>${index}</var>
+</assign>
+<msg timestamp="20180917 23:41:16.265" level="INFO">${index} = 2</msg>
+<status status="PASS" endtime="20180917 23:41:16.265" starttime="20180917 23:41:16.265"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:16.265" starttime="20180917 23:41:16.019"></status>
+</kw>
+<kw type="foritem" name="${suggestion} = stock">
+<kw name="Check Suggestion">
+<arguments>
+<arg>${sugestion_element}${index}</arg>
+<arg>${suggestion}</arg>
+</arguments>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:16.292" starttime="20180917 23:41:16.266"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:16.292" starttime="20180917 23:41:16.266"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${index}+1</arg>
+</arguments>
+<assign>
+<var>${index}</var>
+</assign>
+<msg timestamp="20180917 23:41:16.293" level="INFO">${index} = 3</msg>
+<status status="PASS" endtime="20180917 23:41:16.293" starttime="20180917 23:41:16.292"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:16.293" starttime="20180917 23:41:16.265"></status>
+</kw>
+<kw type="foritem" name="${suggestion} = praha">
+<kw name="Check Suggestion">
+<arguments>
+<arg>${sugestion_element}${index}</arg>
+<arg>${suggestion}</arg>
+</arguments>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:16.320" starttime="20180917 23:41:16.293"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:16.321" starttime="20180917 23:41:16.293"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${index}+1</arg>
+</arguments>
+<assign>
+<var>${index}</var>
+</assign>
+<msg timestamp="20180917 23:41:16.321" level="INFO">${index} = 4</msg>
+<status status="PASS" endtime="20180917 23:41:16.321" starttime="20180917 23:41:16.321"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:16.321" starttime="20180917 23:41:16.293"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:16.321" starttime="20180917 23:41:16.003"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:16.321" starttime="20180917 23:41:16.002"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:41:16.700" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:41:16.700" starttime="20180917 23:41:16.321"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180917 23:41:16.777" starttime="20180917 23:41:16.701"></status>
+</kw>
+<doc>Verify that suggestion
+functions works as expected.</doc>
+<status status="PASS" endtime="20180917 23:41:16.777" critical="yes" starttime="20180917 23:41:07.452"></status>
+</test>
+<test id="s1-s1-t5" name="Misspell">
+<kw type="setup" name="Open Google" library="Google_Keywords">
+<arguments>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.google.com/</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:16.779" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" endtime="20180917 23:41:19.475" starttime="20180917 23:41:16.779"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180917 23:41:19.699" starttime="20180917 23:41:19.475"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:41:20.203" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:41:20.203" starttime="20180917 23:41:19.699"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:20.203" starttime="20180917 23:41:16.779"></status>
+</kw>
+<kw name="Search For avst software" library="Google_Keywords">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:20.205" level="INFO">Typing text 'avst software' into text field 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20180917 23:41:20.334" starttime="20180917 23:41:20.204"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${search_btn_suggest}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:20.555" starttime="20180917 23:41:20.334"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${search_btn_suggest}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:20.556" level="INFO">Clicking button 'xpath=//input[@class="lsb"]'.</msg>
+<status status="PASS" endtime="20180917 23:41:22.011" starttime="20180917 23:41:20.555"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:22.011" starttime="20180917 23:41:20.204"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${included_search}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:22.034" level="INFO">Current page contains text 'Including results for avast software'.</msg>
+<status status="PASS" endtime="20180917 23:41:22.034" starttime="20180917 23:41:22.011"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:41:22.476" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:41:22.476" starttime="20180917 23:41:22.035"></status>
+</kw>
+<kw name="Search av$st software Using Enter">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:22.477" level="INFO">Typing text 'av$st software' into text field 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20180917 23:41:22.596" starttime="20180917 23:41:22.476"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:24.358" starttime="20180917 23:41:22.597"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:24.358" starttime="20180917 23:41:22.476"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${showing_search}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:24.378" level="INFO">Current page contains text 'Showing results for avast software'.</msg>
+<status status="PASS" endtime="20180917 23:41:24.378" starttime="20180917 23:41:24.359"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:41:24.792" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:41:24.792" starttime="20180917 23:41:24.379"></status>
+</kw>
+<kw name="Search av漢st software Using Enter">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:24.793" level="INFO">Typing text 'av漢st software' into text field 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20180917 23:41:24.949" starttime="20180917 23:41:24.793"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:26.080" starttime="20180917 23:41:24.949"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:26.081" starttime="20180917 23:41:24.793"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${showing_search}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:26.097" level="INFO">Current page contains text 'Showing results for avast software'.</msg>
+<status status="PASS" endtime="20180917 23:41:26.097" starttime="20180917 23:41:26.081"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:41:26.530" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:41:26.531" starttime="20180917 23:41:26.098"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180917 23:41:26.615" starttime="20180917 23:41:26.531"></status>
+</kw>
+<doc>Verify that google offers correct
+word if searched keyword is misspelled.</doc>
+<status status="PASS" endtime="20180917 23:41:26.615" critical="yes" starttime="20180917 23:41:16.778"></status>
+</test>
+<doc>Scope of this test is to verify
+that search function works as expected</doc>
+<status status="PASS" endtime="20180917 23:41:26.618" starttime="20180917 23:40:28.162"></status>
+</suite>
+<suite source="/Users/falada/Testing/Google/Google_Test/Tests/Google_Search_Limits.robot" id="s1-s2" name="Google Search Limits">
+<test id="s1-s2-t1" name="Verify Querry Lenght Is Set Properly For Api">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>${valid_lenght_api}</arg>
+</arguments>
+<assign>
+<var>${string}</var>
+</assign>
+<msg timestamp="20180917 23:41:26.807" level="INFO">${string} = KNm2G4VypwmzVIamsMloRsF9WqjpRA8pPNzTUiST9fNpuUh5oa3dgv7zCz6TGG4GIw1qFQKXlQ0HYpwrRcSRxLGW0TgJBSKzGgEupk0b3HgAR3deburM9cWtDL55y9iihsIGlLGGTRmdFnGwcuioe8PX9bmuGq7JVfqFpgYBIuxZaby84ZWGfhbVqdvrU91TJmhnMIuv...</msg>
+<status status="PASS" endtime="20180917 23:41:26.807" starttime="20180917 23:41:26.799"></status>
+</kw>
+<kw name="Send Get Request" library="Rest">
+<arguments>
+<arg>${api_endpoint}</arg>
+<arg>{"ei": "${ei}", "q": "${string}", "oq": "${string}", "cache-control": "no-cache", "postman-token": "${token}"}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:27.409" starttime="20180917 23:41:26.807"></status>
+</kw>
+<kw name="Get Response Code" library="Rest">
+<assign>
+<var>${code}</var>
+</assign>
+<msg timestamp="20180917 23:41:27.410" level="INFO">${code} = 200</msg>
+<status status="PASS" endtime="20180917 23:41:27.410" starttime="20180917 23:41:27.410"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${code}</arg>
+<arg>200</arg>
+</arguments>
+<msg timestamp="20180917 23:41:27.410" level="INFO">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20180917 23:41:27.411" starttime="20180917 23:41:27.410"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>${invalid_lenght_api}</arg>
+</arguments>
+<assign>
+<var>${string}</var>
+</assign>
+<msg timestamp="20180917 23:41:27.419" level="INFO">${string} = DCwMsowbDAvsfaD9NpLOPfnYjR1Tmxm4vHvBwKLvI3ilxFxPUTau9Fx5RMsNUEGEJkSlvx8iOm2KSkw0psHRTs4pm0HEfe8bzQgj8PZGbnk59V9fXS0LasXEKHTgeDUYu24XNmdoPJ2OEQuEUzlmpfxAzEJt3lkBNUBZvWPrrpArQv1rc8Rb3N7gwBxA7wwG49qTODWV...</msg>
+<status status="PASS" endtime="20180917 23:41:27.419" starttime="20180917 23:41:27.411"></status>
+</kw>
+<kw name="Send Get Request" library="Rest">
+<arguments>
+<arg>${api_endpoint}</arg>
+<arg>{"ei": "${ei}", "q": "${string}", "oq": "${string}", "cache-control": "no-cache", "postman-token": "${token}"}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:27.875" starttime="20180917 23:41:27.419"></status>
+</kw>
+<kw name="Get Response Code" library="Rest">
+<assign>
+<var>${code}</var>
+</assign>
+<msg timestamp="20180917 23:41:27.875" level="INFO">${code} = 413</msg>
+<status status="PASS" endtime="20180917 23:41:27.875" starttime="20180917 23:41:27.875"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${code}</arg>
+<arg>413</arg>
+</arguments>
+<msg timestamp="20180917 23:41:27.876" level="INFO">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20180917 23:41:27.876" starttime="20180917 23:41:27.876"></status>
+</kw>
+<doc>Test that if random string reaches specific
+lenght, google returns 413 response code.</doc>
+<status status="PASS" endtime="20180917 23:41:27.876" critical="yes" starttime="20180917 23:41:26.798"></status>
+</test>
+<test id="s1-s2-t2" name="Verify Querry Lenght Using Google UI">
+<kw type="setup" name="Open Google" library="Google_Keywords">
+<arguments>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.google.com/</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:27.878" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" endtime="20180917 23:41:34.448" starttime="20180917 23:41:27.878"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180917 23:41:34.664" starttime="20180917 23:41:34.449"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:41:35.157" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:41:35.157" starttime="20180917 23:41:34.664"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:35.157" starttime="20180917 23:41:27.878"></status>
+</kw>
+<kw name="Search For Random String">
+<arguments>
+<arg>${valid_lenght_ui}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>${lenght}</arg>
+</arguments>
+<assign>
+<var>${string}</var>
+</assign>
+<msg timestamp="20180917 23:41:35.159" level="INFO">${string} = RCX9TSaE14loIEBNbicawGSEEjTiVvWJ3agIb8Y1tk6KuNMj1hpX5fjv43hRofNxTiyokd3WRyADHgbFtUGbANFlIAezmOs4iyznZ0vn1rGHjiDTbQA07OAaj0I9ioDG</msg>
+<status status="PASS" endtime="20180917 23:41:35.159" starttime="20180917 23:41:35.158"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>${string}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:35.160" level="INFO">Typing text 'RCX9TSaE14loIEBNbicawGSEEjTiVvWJ3agIb8Y1tk6KuNMj1hpX5fjv43hRofNxTiyokd3WRyADHgbFtUGbANFlIAezmOs4iyznZ0vn1rGHjiDTbQA07OAaj0I9ioDG' into text field 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20180917 23:41:35.785" starttime="20180917 23:41:35.159"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${search_btn}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:35.797" starttime="20180917 23:41:35.785"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${search_btn}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:35.798" level="INFO">Clicking button 'name=btnK'.</msg>
+<status status="PASS" endtime="20180917 23:41:36.553" starttime="20180917 23:41:35.798"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:36.553" starttime="20180917 23:41:35.157"></status>
+</kw>
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>${long_message}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:36.580" level="INFO">Current page does not contain text 'is too long'.</msg>
+<status status="PASS" endtime="20180917 23:41:36.580" starttime="20180917 23:41:36.554"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:41:36.968" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:41:36.968" starttime="20180917 23:41:36.581"></status>
+</kw>
+<kw name="Go Back" library="Selenium2Library">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" endtime="20180917 23:41:37.146" starttime="20180917 23:41:36.968"></status>
+</kw>
+<kw name="Search For Random String">
+<arguments>
+<arg>${invalid_lenght_ui}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>${lenght}</arg>
+</arguments>
+<assign>
+<var>${string}</var>
+</assign>
+<msg timestamp="20180917 23:41:37.147" level="INFO">${string} = B7GTgZssT138qose5nZWhYQqu7arcdekesZ5L8esXPeLbJexrBWAjnSqfMIaFEwPWEciYIYFPrO5cmTD01HspbwFXZbUhdrE7Ruhx0BJ50oIFt5BpYV1hTEZOzVwTA8Wn</msg>
+<status status="PASS" endtime="20180917 23:41:37.148" starttime="20180917 23:41:37.147"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_box}</arg>
+<arg>${string}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:37.148" level="INFO">Typing text 'B7GTgZssT138qose5nZWhYQqu7arcdekesZ5L8esXPeLbJexrBWAjnSqfMIaFEwPWEciYIYFPrO5cmTD01HspbwFXZbUhdrE7Ruhx0BJ50oIFt5BpYV1hTEZOzVwTA8Wn' into text field 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20180917 23:41:37.755" starttime="20180917 23:41:37.148"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${search_btn}</arg>
+</arguments>
+<status status="PASS" endtime="20180917 23:41:37.762" starttime="20180917 23:41:37.755"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${search_btn}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:37.762" level="INFO">Clicking button 'name=btnK'.</msg>
+<status status="PASS" endtime="20180917 23:41:38.146" starttime="20180917 23:41:37.762"></status>
+</kw>
+<status status="PASS" endtime="20180917 23:41:38.146" starttime="20180917 23:41:37.146"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${long_message}</arg>
+</arguments>
+<msg timestamp="20180917 23:41:38.157" level="INFO">Current page contains text 'is too long'.</msg>
+<status status="PASS" endtime="20180917 23:41:38.157" starttime="20180917 23:41:38.147"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180917 23:41:38.538" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180917 23:41:38.538" starttime="20180917 23:41:38.157"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180917 23:41:38.615" starttime="20180917 23:41:38.538"></status>
+</kw>
+<doc>Test that if random string reaches specific
+lenght, google returns 413 response code.</doc>
+<status status="PASS" endtime="20180917 23:41:38.615" critical="yes" starttime="20180917 23:41:27.877"></status>
+</test>
+<status status="PASS" endtime="20180917 23:41:38.617" starttime="20180917 23:41:26.623"></status>
+</suite>
+<status status="PASS" endtime="20180917 23:41:38.620" starttime="20180917 23:40:28.141"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="7">Critical Tests</stat>
+<stat fail="0" pass="7">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Google Basic Search &amp; Google Search Limits" pass="7">Google Basic Search &amp; Google Search Limits</stat>
+<stat fail="0" id="s1-s1" name="Google Basic Search" pass="5">Google Basic Search &amp; Google Search Limits.Google Basic Search</stat>
+<stat fail="0" id="s1-s2" name="Google Search Limits" pass="2">Google Basic Search &amp; Google Search Limits.Google Search Limits</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

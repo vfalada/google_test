@@ -1,0 +1,15 @@
+*** Settings ***
+Library    Selenium2Library    
+Variables    ../Objects/Google_Objects.py
+
+*** Keywords ***
+Open Google
+    [Arguments]    ${browser}
+    Open Browser  https://www.google.com/    ${browser}
+    Maximize Browser Window
+    Capture Page Screenshot    
+    
+Search For ${keyword}
+    Input Text    ${search_box}    ${keyword}
+    Wait Until Page Contains Element    ${search_btn_suggest}       
+    Click Button    ${search_btn_suggest}
